@@ -59,7 +59,7 @@ steps:
 substitutions:
   _SERVICE_NAME: myservice
   _REGION: us-central1
-  _GITHUB_REPO: ${{github.event.pull_request.head.repo.full_name}}
+  _GITHUB_REPO: helloworld-python
 
 options:
   dynamicSubstitutions: true
@@ -67,4 +67,4 @@ options:
 availableSecrets:
   secretManager:
     - versionName: projects/$PROJECT_ID/secrets/github_token/versions/latest
-      env: "GITHUB_TOKEN"
+      env: "github_token"
